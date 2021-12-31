@@ -3,5 +3,5 @@ from .consumer import WSConsumer
 
 
 ws_urlpatterns = [
-    path('ws', WSConsumer.as_asgi()),
+    path('ws/url', WSConsumer.as_asgi()),
 ]
