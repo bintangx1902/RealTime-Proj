@@ -5,8 +5,10 @@ from channels.generic.websocket import WebsocketConsumer
 
 
 class WSConsumer(WebsocketConsumer):
-    async def connect(self):
+    def connect(self):
         self.accept()
-        for i in range(1_000):
-            await self.send(json.dumps({"messages": randint(1, 100)}))
+        for i in range(3_0):
+            self.send(json.dumps({'messages': randint(1, 150)}))
             sleep(1)
+
+        self.close()
